@@ -1,0 +1,57 @@
+2026-05-03 10:45:23,293 - INFO - ============================================================
+2026-05-03 10:45:23,293 - INFO - TRAINING PIPELINE STARTED
+2026-05-03 10:45:23,293 - INFO - ============================================================
+2026-05-03 10:45:23,293 - INFO - Loading Dataset: data/customer_churn.xlsx
+2026-05-03 10:45:23,293 - INFO - Loading Dataset
+2026-05-03 10:45:23,295 - ERROR - Error Occured while reading file: 'utf-8' codec can't decode byte 0x82 in position 16: invalid start byte
+2026-05-03 10:45:23,295 - ERROR - Training Pipeline Failed: local variable 'df' referenced before assignment
+2026-05-03 10:46:09,869 - INFO - ============================================================
+2026-05-03 10:46:09,869 - INFO - TRAINING PIPELINE STARTED
+2026-05-03 10:46:09,871 - INFO - ============================================================
+2026-05-03 10:46:09,871 - INFO - Loading Dataset: data/customer_churn.xlsx
+2026-05-03 10:46:09,871 - INFO - Loading Dataset
+2026-05-03 10:46:09,872 - ERROR - Error Occured while reading file: 'utf-8' codec can't decode byte 0x82 in position 16: invalid start byte
+2026-05-03 10:46:09,872 - ERROR - Training Pipeline Failed: local variable 'df' referenced before assignment
+2026-05-03 10:46:50,513 - INFO - ============================================================
+2026-05-03 10:46:50,513 - INFO - TRAINING PIPELINE STARTED
+2026-05-03 10:46:50,513 - INFO - ============================================================
+2026-05-03 10:46:50,513 - INFO - Loading Dataset: data/customer_churn.xlsx
+2026-05-03 10:46:50,513 - INFO - Loading Dataset
+2026-05-03 10:46:50,514 - ERROR - Error Occured while reading file: 'utf-8' codec can't decode byte 0x82 in position 16: invalid start byte
+2026-05-03 10:46:50,514 - ERROR - Training Pipeline Failed: local variable 'data' referenced before assignment
+2026-05-03 10:47:14,931 - INFO - ============================================================
+2026-05-03 10:47:14,931 - INFO - TRAINING PIPELINE STARTED
+2026-05-03 10:47:14,931 - INFO - ============================================================
+2026-05-03 10:47:14,931 - INFO - Loading Dataset: data/customer_churn.xlsx
+2026-05-03 10:47:14,931 - INFO - Loading Dataset
+2026-05-03 10:47:16,241 - INFO - Dataset Loaded Successfully | Shape: (7043, 33)
+2026-05-03 10:47:16,241 - INFO - Preprocessing Started
+2026-05-03 10:47:16,257 - INFO - Duplicates Removed: 0
+2026-05-03 10:47:16,259 - INFO - Unnecessary columns dropped
+2026-05-03 10:47:16,269 - INFO - Missing values removed: 11
+2026-05-03 10:47:16,270 - INFO - Feature and target separated
+2026-05-03 10:47:16,270 - INFO - ColumnTransformer created successfully
+2026-05-03 10:47:16,297 - INFO - Feature transformation completed
+2026-05-03 10:47:16,298 - INFO - Splitting train/test data (70/30)
+2026-05-03 10:47:16,301 - INFO - Train Shape: (4922, 31)
+2026-05-03 10:47:16,301 - INFO - Test Shape: (2110, 31)
+2026-05-03 10:47:16,301 - INFO - Preprocessing Completed
+2026-05-03 10:47:16,302 - INFO - Preprocessing Completed Successfully
+2026-05-03 10:47:16,302 - INFO - Initializing ModelTrainer
+2026-05-03 10:47:16,302 - INFO - Training all models started
+2026-05-03 10:47:16,302 - INFO - Training Started: RandomForestClassifier
+2026-05-03 10:47:20,591 - INFO - Training Completed: RandomForestClassifier
+2026-05-03 10:47:20,591 - INFO - Best Params (RandomForestClassifier) = {'n_estimators': 100, 'min_samples_split': 5, 'max_depth': 10}
+2026-05-03 10:47:20,612 - INFO - Calculating evaluation metrics
+2026-05-03 10:47:20,624 - INFO - RandomForestClassifier | Accuracy=0.7986 | F1=0.5703 | ROC_AUC=0.7042
+2026-05-03 10:47:20,624 - INFO - Training Started: XGBClassifier
+2026-05-03 10:47:24,812 - INFO - Training Completed: XGBClassifier
+2026-05-03 10:47:24,812 - INFO - Best Params (XGBClassifier) = {'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.1}
+2026-05-03 10:47:24,814 - INFO - Calculating evaluation metrics
+2026-05-03 10:47:24,825 - INFO - XGBClassifier | Accuracy=0.7915 | F1=0.5802 | ROC_AUC=0.7119
+2026-05-03 10:47:24,830 - INFO - Best Model Selected: XGBClassifier
+2026-05-03 10:47:24,831 - INFO - Model Training Completed
+2026-05-03 10:47:24,848 - INFO - Best model saved at models\best_model.pkl
+2026-05-03 10:47:24,848 - INFO - Best Model Selected: XGBClassifier
+2026-05-03 10:47:24,853 - INFO - Preprocessor Saved Successfully
+2026-05-03 10:47:24,853 - INFO - Generating confusion matrix

@@ -1,0 +1,49 @@
+[ 2026-05-03 10:50:47,506 ] 20 root - INFO - Log file created successfully!
+[ 2026-05-03 10:50:49,524 ] 20 root - INFO - ============================================================
+[ 2026-05-03 10:50:49,524 ] 21 root - INFO - TRAINING PIPELINE STARTED
+[ 2026-05-03 10:50:49,526 ] 22 root - INFO - ============================================================
+[ 2026-05-03 10:50:49,526 ] 27 root - INFO - Loading Dataset: data/customer_churn.xlsx
+[ 2026-05-03 10:50:49,526 ] 6 root - INFO - Loading Dataset
+[ 2026-05-03 10:50:50,967 ] 31 root - INFO - Dataset Loaded Successfully | Shape: (7043, 33)
+[ 2026-05-03 10:50:50,967 ] 27 root - INFO - Preprocessing Started
+[ 2026-05-03 10:50:50,979 ] 36 root - INFO - Duplicates Removed: 0
+[ 2026-05-03 10:50:50,981 ] 61 root - INFO - Unnecessary columns dropped
+[ 2026-05-03 10:50:50,991 ] 73 root - INFO - Missing values removed: 11
+[ 2026-05-03 10:50:50,992 ] 83 root - INFO - Feature and target separated
+[ 2026-05-03 10:50:50,992 ] 140 root - INFO - ColumnTransformer created successfully
+[ 2026-05-03 10:50:51,020 ] 146 root - INFO - Feature transformation completed
+[ 2026-05-03 10:50:51,021 ] 150 root - INFO - Splitting train/test data (70/30)
+[ 2026-05-03 10:50:51,024 ] 162 root - INFO - Train Shape: (4922, 31)
+[ 2026-05-03 10:50:51,024 ] 166 root - INFO - Test Shape: (2110, 31)
+[ 2026-05-03 10:50:51,024 ] 170 root - INFO - Preprocessing Completed
+[ 2026-05-03 10:50:51,025 ] 44 root - INFO - Preprocessing Completed Successfully
+[ 2026-05-03 10:50:51,025 ] 27 root - INFO - Initializing ModelTrainer
+[ 2026-05-03 10:50:51,025 ] 90 root - INFO - Training all models started
+[ 2026-05-03 10:50:51,025 ] 68 root - INFO - Training Started: RandomForestClassifier
+[ 2026-05-03 10:50:55,131 ] 82 root - INFO - Training Completed: RandomForestClassifier
+[ 2026-05-03 10:50:55,131 ] 83 root - INFO - Best Params (RandomForestClassifier) = {'n_estimators': 100, 'min_samples_split': 5, 'max_depth': 10}
+[ 2026-05-03 10:50:55,153 ] 54 root - INFO - Calculating evaluation metrics
+[ 2026-05-03 10:50:55,162 ] 111 root - INFO - RandomForestClassifier | Accuracy=0.7986 | F1=0.5703 | ROC_AUC=0.7042
+[ 2026-05-03 10:50:55,162 ] 68 root - INFO - Training Started: XGBClassifier
+[ 2026-05-03 10:50:58,478 ] 82 root - INFO - Training Completed: XGBClassifier
+[ 2026-05-03 10:50:58,478 ] 83 root - INFO - Best Params (XGBClassifier) = {'n_estimators': 200, 'max_depth': 3, 'learning_rate': 0.1}
+[ 2026-05-03 10:50:58,482 ] 54 root - INFO - Calculating evaluation metrics
+[ 2026-05-03 10:50:58,496 ] 111 root - INFO - XGBClassifier | Accuracy=0.7915 | F1=0.5802 | ROC_AUC=0.7119
+[ 2026-05-03 10:50:58,504 ] 141 root - INFO - Best Model Selected: XGBClassifier
+[ 2026-05-03 10:50:58,504 ] 58 root - INFO - Model Training Completed
+[ 2026-05-03 10:50:58,520 ] 151 root - INFO - Best model saved at models\best_model.pkl
+[ 2026-05-03 10:50:58,520 ] 74 root - INFO - Best Model Selected: XGBClassifier
+[ 2026-05-03 10:50:58,523 ] 86 root - INFO - Preprocessor Saved Successfully
+[ 2026-05-03 10:50:58,523 ] 156 root - INFO - Generating confusion matrix
+[ 2026-05-03 10:51:26,215 ] 95 root - INFO - Training Pipeline Completed
+[ 2026-05-03 10:51:26,220 ] 114 root - INFO - ============================================================
+[ 2026-05-03 10:51:26,220 ] 115 root - INFO - PREDICTION PIPELINE STARTED
+[ 2026-05-03 10:51:26,220 ] 116 root - INFO - ============================================================
+[ 2026-05-03 10:51:26,220 ] 25 root - INFO - Initializing Prediction Pipeline
+[ 2026-05-03 10:51:26,269 ] 36 root - INFO - Model Loaded Successfully: models/best_model.pkl
+[ 2026-05-03 10:51:26,269 ] 69 root - INFO - Prediction Started
+[ 2026-05-03 10:51:26,269 ] 49 root - INFO - Preparing input data
+[ 2026-05-03 10:51:26,270 ] 53 root - INFO - Input Shape: (1, 20)
+[ 2026-05-03 10:51:26,271 ] 84 root - ERROR - Prediction Failed: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:Gender: object, Senior Citizen: object, Partner: object, Dependents: object, Phone Service: object, Multiple Lines: object, Internet Service: object, Online Security: object, Online Backup: object, Device Protection: object, Tech Support: object, Streaming TV: object, Streaming Movies: object, Contract: object, Paperless Billing: object, Payment Method: object
+[ 2026-05-03 10:51:26,272 ] 135 root - ERROR - Full Prediction Failed: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:Gender: object, Senior Citizen: object, Partner: object, Dependents: object, Phone Service: object, Multiple Lines: object, Internet Service: object, Online Security: object, Online Backup: object, Device Protection: object, Tech Support: object, Streaming TV: object, Streaming Movies: object, Contract: object, Paperless Billing: object, Payment Method: object
+[ 2026-05-03 10:51:26,272 ] 159 root - ERROR - Prediction Pipeline Failed: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:Gender: object, Senior Citizen: object, Partner: object, Dependents: object, Phone Service: object, Multiple Lines: object, Internet Service: object, Online Security: object, Online Backup: object, Device Protection: object, Tech Support: object, Streaming TV: object, Streaming Movies: object, Contract: object, Paperless Billing: object, Payment Method: object
